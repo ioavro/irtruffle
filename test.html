@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Learning JavaScript</title>
+    <style>
+         html,body{
+             margin: 0 !important;
+             padding: 0 !important;
+         }
+     .menu{
+         width: 100%;
+         height: 50px;
+         background-color:rgba(0,0,0,0.7);
+     }
+     .menu ul{
+         list-style: none;
+         width: 800px;
+         height: inherit;
+         margin: auto;
+     }
+     .menu ul li{
+         width: 100px;
+         height: 50px;
+         float: left;
+         margin-left: 65px;
+         position: relative;
+     }
+     .menu ul li a{
+         display: block;
+         width: inherit;
+         height: inherit;
+         line-height: 50px;
+         font-family: "Comic Sans MS";
+         text-decoration: none;
+         text-align: center;
+         color:whitesmoke;
+     }
+     .menu ul li .submenu {
+         width: 300px;
+         height: 0;
+         background-color: orangered;
+     }
+
+
+    </style>
+</head>
+
+<body>
+    
+    <section class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li onmouseenter="enterMenu()" onmouseleave="leaveMenu()">
+                <a href="#">Gallery Us</a>
+                <ul class="submenu" id="subMenu">
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">Movie</a></li>
+                    <li><a href="#">Art</a></li>
+                </ul>
+            </li>
+
+
+
+        </ul>
+
+    </section>
+
+<script>
+    var subMenu=document.getElementById('subMenu');
+    function enterMenu(){
+        subMenu.style.height='150px';
+        subMenu.style.transition='all 0.5s ease';
+    }
+    function leaveMenu(){
+        subMenu.style.height='0';
+        subMenu.style.transition='all 0.5s ease';
+    }
+</script>
+
+</body>
+
+</html>
+
+
+
